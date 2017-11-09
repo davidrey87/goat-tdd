@@ -49,5 +49,6 @@ class NewVisitorTest(unittest.TestCase):
         # methodical)
         self.fail('Finish the test!')
 
+
 if __name__ == '__main__':  
     unittest.main()
