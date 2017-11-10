@@ -1,4 +1,3 @@
-
 from django.test import LiveServerTestCase
 from selenium import webdriver
 from selenium.common.exceptions import WebDriverException
