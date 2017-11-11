@@ -158,3 +158,4 @@ class ListViewTest(TestCase):
         self.assertContains(response, expected_error)
         self.assertTemplateUsed(response, 'list.html')
         self.assertEqual(Item.objects.all().count(), 1)
+
