@@ -2,4 +2,4 @@ language: python
   - 3.7
 script:
   pip install -r requirements.txt
-  python3 manage.py test lists
+  python manage.py test lists
