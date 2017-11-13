@@ -1,4 +1,5 @@
 language: python
   - 3.7
 script:
-  sudo pip install -r requirements.txt python manage.py test lists
+  sudo pip install -r requirements.txt
+  python manage.py test lists
