@@ -17,7 +17,7 @@ before_install:
 
 install:
   - sudo apt-get install xvfb
-  - pip install pyvirtualdisplay selenium
+  - pip install selenium
   - pip install -r requirements.txt
 
 script:
