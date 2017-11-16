@@ -1,7 +1,12 @@
 language: python
-  - 3.7
+dist: trusty
 
- addons:
+python:
+  - 3.5
+
+sudo: required
+
+addons:
   apt:
     packages:
       - libappindicator1
@@ -17,10 +22,11 @@ before_install:
   - sudo chmod u+x chromedriver
   - sudo mv chromedriver /usr/bin/
   - sh -e /etc/init.d/xvfb start
- 
+
 install:
-  sudo pip install -r requirements.txt
-  sudo pip install selenium
+  - pip install selenium
+  - pip install -r requiremenst.txt
+
 script:
   - python3 manage.py test lists/tests
   - python3 manage.py test functional_tests
