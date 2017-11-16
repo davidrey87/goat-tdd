@@ -16,7 +16,8 @@ before_install:
   - export PATH=$PATH:$PWD/geckodriver
 
 install:
-  - pip install selenium
+  - sudo apt-get install xvfb
+  - pip install pyvirtualdisplay selenium
   - pip install -r requirements.txt
 
 script:
