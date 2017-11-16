@@ -25,7 +25,7 @@ before_install:
 
 install:
   - pip install selenium
-  - pip install -r requiremenst.txt
+  - pip install -r requirements.txt
 
 script:
   - python3 manage.py test lists/tests
