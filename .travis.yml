@@ -1,7 +1,26 @@
 language: python
   - 3.7
+
+ addons:
+  apt:
+    packages:
+      - libappindicator1
+      - fonts-liberation
+      - chromium-browser
+      - chromium-chromedriver
+
+before_install:
+  - export CHROME_BIN=chromium-browser
+  - export DISPLAY=:99.0
+  - wget http://chromedriver.storage.googleapis.com/2.21/chromedriver_linux64.zip
+  - unzip chromedriver_linux64.zip
+  - sudo chmod u+x chromedriver
+  - sudo mv chromedriver /usr/bin/
+  - sh -e /etc/init.d/xvfb start
+ 
 install:
   sudo pip install -r requirements.txt
   sudo pip install selenium
 script:
-  python manage.py test functional_tests/
+  - python3 manage.py test lists/tests
+  - python3 manage.py test functional_tests
